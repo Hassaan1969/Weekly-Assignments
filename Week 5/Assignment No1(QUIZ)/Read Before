@@ -1,0 +1,19 @@
+// Run these commands first in terminal 
+npm init -y                // to create ts config file
+tsc --init                 // to start transcript compiler 
+IN PACKAGE.JSON FILE ADD  THE FOLLOWING SETTINGS AFTER "main": "index.js",
+'type':'module',
+THEN IN TSCONFIG.JSON UPDATE THE FOLLOWING SETTINGS
+target = ES2022
+module=NodeNext
+
+AND THEN UNCOMMENT
+moduleResolution='nodeNext'
+THEN IN THE MAIN FILE AND IN MY PROGRAM, I.E module.js RUN FOLLOWING COMMANDS 
+
+npm i @types/node -D 
+npm i inquirer
+npm i @types/inquirer -D
+npm i chalk
+npm i @types/chalk -D
+npm i node node-banner 
