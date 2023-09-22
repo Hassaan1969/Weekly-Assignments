@@ -1,9 +1,12 @@
+#!/usr/bin/env node
 import showBanner from "node-banner";
 import result from "./result.js";
 import { q1, q2, q3, q4, q5 } from "./Qustion.js";
-(async () => {
+async function show() {
     await showBanner('QUIZ', '');
-})();
+}
+;
+await show();
 await q1();
 await q2();
 await q3();

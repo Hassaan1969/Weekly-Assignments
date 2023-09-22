@@ -1,8 +1,11 @@
 {
-  "name": "hassaan",
+  "name": "tekken-quiz69",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A tekken Quiz Package ",
+  "main": "module.js",
+  "bin": {
+    "tekken-quiz": "./cli.js"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

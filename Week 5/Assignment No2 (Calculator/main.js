@@ -24,21 +24,23 @@ async function choices() {
     if (a == "+") {
         let a1 = await input();
         let a2 = await input2();
-        await add(a1, a2);
+        console.log(await add(a1, a2));
     }
     else if (a == "-") {
         let a1 = await input();
         let a2 = await input2();
-        await subraction(a1, a2);
+        console.log(await subraction(a1, a2));
     }
     else if (a == "*") {
         let a1 = await input();
         let a2 = await input2();
-        await multiply(a1, a2);
+        console.log(await multiply(a1, a2));
     }
     else {
         let a1 = await input();
         let a2 = await input2();
-        await divison(a1, a2);
+        console.log(await divison(a1, a2));
     }
 }
+await name();
+await choices();
