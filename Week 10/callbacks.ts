@@ -1,10 +1,4 @@
-import { rejects } from "assert";
-import { log } from "console";
-import { createDiffieHellmanGroup } from "crypto";
-import { promises } from "dns";
-import { get } from "http";
-import { resolve } from "path";
-import { promiseHooks } from "v8";
+
 // call back is a concept in which a function is pass in an arugument of another function
 // function calculator (a,b,operation){
 
@@ -135,14 +129,14 @@ reject(`bad cheese `)
 },3000)
 })}
 
-function makedough(cheese){
+function makedough(){
 return new Promise ((resolve,reject)=>
 setTimeout(()=>{
 let dough="🍛";
 resolve(dough)
 },2000))}
 
-function makepizza(dough){
+function makepizza(){
 return new Promise ((resolve,reject)=>{
 setTimeout(()=>{
 let pizza= "🍕";
@@ -167,22 +161,16 @@ resolve(pizza)},3000)})}
  
 
 async function makingofpizza(){
-
-
-  try{
-  let cheese = await getcheese();
-  console.log(`we got the cheese`, cheese);
-  let dough=await makedough(cheese)
-console.log(`We got the dough`, dough);
-let readypizza=await makepizza(dough);
-console.log(`the pizza is ready`,readypizza);
-}
-catch(Err){
-console.log(`Alas pizza wasnt ready due to `, Err)
-
-
-
-}
-
+    try{
+        let cheese = await getcheese();
+        console.log(`we got the cheese`, cheese);
+        let dough=await makedough()
+        console.log(`We got the dough`, dough);
+        let readypizza=await makepizza();
+        console.log(`the pizza is ready`,readypizza);
+    }
+    catch(Err){
+        console.log(`Alas pizza wasnt ready due to `, Err)
+    }
 }
 makingofpizza();
